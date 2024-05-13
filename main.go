@@ -5,8 +5,13 @@ import (
 
 	"github.com/gin-gonic/gin"
 
+	"photomanagerapp/database"
 	"photomanagerapp/routers"
 )
+
+func init() {
+	database.ConnectToDB()
+}
 
 func main() {
 	router := gin.Default()
