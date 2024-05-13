@@ -11,6 +11,6 @@ func PhotoRouter(router *gin.Engine) {
 
 	photoGroupRouter.GET("/", controllers.PhotoShow)
 	photoGroupRouter.POST("/", controllers.PhotoCreate)
-	photoGroupRouter.PUT("/:photoId", controllers.PhotoEdit)
+	photoGroupRouter.PUT("/:photoId", controllers.PhotoUpdate)
 	photoGroupRouter.DELETE("/:photoId", controllers.PhotoDelete)
 }
