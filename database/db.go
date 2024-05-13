@@ -3,6 +3,8 @@ package database
 import (
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
+
+	"photomanagerapp/models"
 )
 
 var DB *gorm.DB
@@ -15,4 +17,8 @@ func ConnectToDB() {
 	if err != nil {
 		panic(err)
 	}
+}
+
+func MigrateDb() {
+	DB.AutoMigrate(&models.User{}, &models.Photo{})
 }
