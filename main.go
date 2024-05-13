@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 
-	"photomanagerapp/routers"
-
 	"github.com/gin-gonic/gin"
+
+	"photomanagerapp/routers"
 )
 
 func main() {
